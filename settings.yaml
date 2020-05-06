@@ -1,0 +1,212 @@
+container_host_names:
+  MEMCACHED:
+    host: memcached
+  POSTGIS:
+    host: postgis
+  RABBITMQ:
+    host: rabbitmq
+  REDIS:
+    host: redis
+default:
+  DISKCACHE:
+    shards: 4
+    size_limit: 8000000000
+    timeout: 60
+  IMAGINATION:
+    celery:
+      task_settings:
+        diskcache_expire_time: 21600
+        memcached_expire_time: 30
+      tasks:
+        process_geometries:
+          trigger_geoserver: false
+    copernicus_accounts:
+      Bayshubar: ralph0921
+      Cervantes_Samuel_1977_pyoung: WiubdedWtvubtd5nXB1cN4qLkvjmPaDf
+      Cross_Matthew_1956_dan73: g7Huxph3vGmDZr6z6DeYxUKH2BFlY1p0
+      Lopez_Joshua_1959_kwilson: gRsIoS9T5UCQgP7HSQcZxkoLWTbYL9mO
+      Morton_Lindsey_1943_qthompson: LnDdRpLsy0RIxNGH06Q3t0gCbbJtdUSa
+      Rodriguez_John_1994_alexis77: ebZ00Sb778uD0HKxwCcYPAzp4cpUCaSK
+      kirkafot: morbden.kirkafot
+      kirkafotik: BoabiKirkafot123!
+      lgblkb: Dikalyaka2!
+      lgblkb2: Dikalyaka2!
+      markdoni: gaotao.markdoni
+      martissi: mindel.martissi
+      nazerke_bakh: Alishka8
+      rauan: dontcome111
+      zhandos: astana2017
+    dirs:
+      cache_folder: /home/lgblkb/imagination/cache
+      data_folder: /home/lgblkb/imagination/data
+      field_rasters_folder: /home/lgblkb/imagination/field_rasters
+      locks_folder: /home/lgblkb/imagination/locks
+      logs_folder: /home/lgblkb/imagination/logs
+      media_folder: /home/lgblkb/imagination/media
+      results_folder: /home/lgblkb/imagination/results
+      sentinel2_folder: /home/lgblkb/imagination/sentinel2
+    image_processing:
+      band_names:
+        - B02
+        - B03
+        - B04
+        - B08
+        - B11
+      generate_indices: true
+      generate_pngs: true
+      max_resize_factor: 3
+    image_query:
+      daterange_days: 14
+      expire_time: 21600
+  MEMCACHED:
+    host: localhost
+    options:
+      connect_timeout: 60
+      timeout: 120
+    port: 11211
+  POSTGIS:
+    database: imagination
+    host: localhost
+    password: Dikalyaka2!
+    port: 5432
+    username: lgblkb
+  RABBITMQ:
+    host: localhost
+    password: Dikalyaka2!
+    port: 5672
+    username: lgblkb
+  REDIS:
+    db: 0
+    decode_responses: true
+    host: localhost
+    password: Dikalyaka2!
+    port: 6379
+  SINGLETON:
+    lock_time: 5400
+    polling_period: 1
+development:
+  DISKCACHE:
+    shards: 4
+    size_limit: 8000000000
+    timeout: 60
+  IMAGINATION:
+    celery:
+      task_settings:
+        diskcache_expire_time: 21600
+        memcached_expire_time: 30
+      tasks:
+        process_geometries:
+          trigger_geoserver: false
+    copernicus_accounts:
+      Bayshubar: ralph0921
+      Cervantes_Samuel_1977_pyoung: WiubdedWtvubtd5nXB1cN4qLkvjmPaDf
+      Cross_Matthew_1956_dan73: g7Huxph3vGmDZr6z6DeYxUKH2BFlY1p0
+      Lopez_Joshua_1959_kwilson: gRsIoS9T5UCQgP7HSQcZxkoLWTbYL9mO
+      Morton_Lindsey_1943_qthompson: LnDdRpLsy0RIxNGH06Q3t0gCbbJtdUSa
+      Rodriguez_John_1994_alexis77: ebZ00Sb778uD0HKxwCcYPAzp4cpUCaSK
+      kirkafot: morbden.kirkafot
+      kirkafotik: BoabiKirkafot123!
+      lgblkb: Dikalyaka2!
+      lgblkb2: Dikalyaka2!
+      markdoni: gaotao.markdoni
+      martissi: mindel.martissi
+      nazerke_bakh: Alishka8
+      rauan: dontcome111
+      zhandos: astana2017
+    dirs:
+      cache_folder: /home/lgblkb/imagination/cache
+      data_folder: /home/lgblkb/imagination/data
+      field_rasters_folder: /home/lgblkb/imagination/field_rasters
+      locks_folder: /home/lgblkb/imagination/locks
+      logs_folder: /home/lgblkb/imagination/logs
+      media_folder: /home/lgblkb/imagination/media
+      results_folder: /home/lgblkb/imagination/results
+      sentinel2_folder: /home/lgblkb/imagination/sentinel2
+    image_processing:
+      band_names:
+        - B02
+        - B03
+        - B04
+        - B08
+        - B11
+      generate_indices: true
+      generate_pngs: true
+      max_resize_factor: 3
+    image_query:
+      daterange_days: 14
+      expire_time: 21600
+  MEMCACHED:
+    host: localhost
+    options:
+      connect_timeout: 60
+      timeout: 120
+    port: 11211
+  POSTGIS:
+    database: imagination
+    host: localhost
+    password: Dikalyaka2!
+    port: 5432
+    username: lgblkb
+  RABBITMQ:
+    host: localhost
+    password: Dikalyaka2!
+    port: 5672
+    username: lgblkb
+  REDIS:
+    db: 0
+    decode_responses: true
+    host: localhost
+    password: Dikalyaka2!
+    port: 6379
+  SINGLETON:
+    lock_time: 5400
+    polling_period: 1
+lgblkb_lab:
+  IMAGINATION:
+    image_processing:
+      band_names:
+        - B04
+        - WVP
+        - AOT
+        - B08
+        - B02
+        - B03
+        - B11
+        - B06
+      generate_indices: true
+      generate_pngs: false
+  MEMCACHED:
+    host: memcached
+  POSTGIS:
+    host: postgis
+  RABBITMQ:
+    host: rabbitmq
+  REDIS:
+    host: redis
+production:
+  IMAGINATION:
+    celery:
+      tasks:
+        process_geometries:
+          trigger_geoserver: true
+    image_processing:
+      max_resize_factor: 10
+  MEMCACHED:
+    host: memcached
+  POSTGIS:
+    database: egistic_2.0
+    host: db_default
+    port: 5432
+  RABBITMQ:
+    host: rabbitmq
+  REDIS:
+    host: redis
+staging:
+  MEMCACHED:
+    host: memcached
+  POSTGIS:
+    host: postgis
+  RABBITMQ:
+    host: rabbitmq
+  REDIS:
+    host: redis
