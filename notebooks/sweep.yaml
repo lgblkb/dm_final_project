@@ -1,0 +1,22 @@
+program: train.py
+method: bayes
+metric:
+  name: val_loss
+  goal: minimize
+parameters:
+  learning_rate:
+    min: 0.001
+    max: 0.1
+  num_layers:
+    min: 2
+    max: 10
+  hidden_size:
+    min: 12
+    max: 196
+  num_epochs:
+    min: 2
+    max: 50
+
+early_terminate:
+  type: hyperband
+  min_iter: 3
